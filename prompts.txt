@@ -1,0 +1,24 @@
+"""
+1. ClickHouse Connection & Ingestion API:
+   - Asked for help in setting up a ClickHouse data ingestion API, where users can send CSV-formatted data to be inserted into a specified table.
+   - Discussed ensuring CSV values are correctly passed from the frontend and validated before sending them to the backend for insertion.
+
+2. Frontend CSV Handling:
+   - Wanted to collect CSV-formatted data from the frontend (React), ensure the data was valid, and send it to the backend for insertion.
+   - Discussed the format for sending CSV data as a string in a textarea input field on the frontend.
+
+3. ClickHouse Ingestion Flow (Backend):
+   - Inquired about how to handle the CSV data on the backend, specifically in terms of parsing the data and executing the correct INSERT statement.
+   - Discussed validating and sending the data, and how to handle incoming data on the backend.
+
+4. ClickHouse Table and Schema Loading:
+   - Asked how to load and fetch tables and schema from ClickHouse on the frontend.
+   - Discussed making POST requests to the backend to retrieve the list of tables and schema for a specific table.
+
+5. ClickHouse Data Preview:
+   - Inquired about how to preview the data before inserting it into ClickHouse.
+   - Discussed fetching data from the database and displaying it in a preview section.
+
+6. Error Handling for CSV Ingestion:
+   - Asked about handling errors related to CSV ingestion, specifically addressing situations where the values field is missing or malformed.
+"""

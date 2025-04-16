@@ -1,0 +1,39 @@
+{
+  "name": "clickhouse",
+  "version": "1.6.4",
+  "description": "ClickHouse database interface",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "legacy-install": "node ./src/legacy-support.js",
+    "launch-docker-image": "docker run --rm -d -p 8123:8123 --name clickhouse-server clickhouse/clickhouse-server",
+    "stop-docker-image": "docker stop clickhouse-server",
+    "test": "nyc mocha --recursive ./test -R spec",
+    "report": "nyc report --reporter=lcov > coverage.lcov && codecov",
+    "simpletest": "mocha --recursive ./test -R spec",
+    "torturetest": "TORTURE=1 mocha -gc --recursive ./test -R spec"
+  },
+  "keywords": [
+    "clickhouse",
+    "database",
+    "db"
+  ],
+  "dependencies": {
+    "@apla/clickhouse": "^1.6.4",
+    "@clickhouse/client": "^1.11.0",
+    "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "nodemon": "^3.1.9"
+  },
+  "devDependencies": {
+    "bluebird": "^3.5.0",
+    "codecov": "^2.2.0",
+    "mocha": "^2.5.3",
+    "nyc": "^10.2.0"
+  },
+  "engines": {
+    "node": ">=0.10"
+  }
+}
